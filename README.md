@@ -26,7 +26,8 @@ NotificationDemo/
 └── README.md
 
 ## Output
-![App Output](screenshot.png)
+<img width="1080" height="2358" alt="screenshot5 png" src="https://github.com/user-attachments/assets/3b4aac2f-7a31-4c7a-8781-22f854598b2b" />
+
 
 ## Test Cases
 
