@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private val CHANNEL_ID = "demo_channel"
     private val NOTIFICATION_ID = 1
     private val PERMISSION_CODE = 100
+    private var alertCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +27,12 @@ class MainActivity : AppCompatActivity() {
         createNotificationChannel()
 
         val btnNotify = findViewById<Button>(R.id.btnNotify)
+        val tvAlertCount = findViewById<TextView>(R.id.tvAlertCount)
+
         btnNotify.setOnClickListener {
             checkPermissionAndNotify()
+            alertCount++
+            tvAlertCount.text = alertCount.toString()
         }
     }
 
@@ -67,8 +73,8 @@ class MainActivity : AppCompatActivity() {
     private fun sendNotification() {
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
-            .setContentTitle("Hello!")
-            .setContentText("This is a demo notification from the app.")
+            .setContentTitle("Dashboard Alert")
+            .setContentText("You have a new notification from your dashboard.")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {
