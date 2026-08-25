@@ -388,7 +388,10 @@ The application requests notification permission where required, creates a Notif
 
 ### Output Screenshot
 
-<img width="1080" height="2358" alt="screenshot5 png" src="https://github.com/user-attachments/assets/7825769d-b44f-44a0-ae55-53c9d4cc2df0" />
+<img width="732" height="1600" alt="screenshot501" src="https://github.com/user-attachments/assets/7c1a9def-2393-4a1d-b01f-72586f83762e" />
+<img width="732" height="1600" alt="screenshot502" src="https://github.com/user-attachments/assets/496ab4de-d6f0-40f3-ab06-aebea90a726d" />
+
+
 
 
 ---
